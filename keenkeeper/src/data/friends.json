@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Chen",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "sarah.chen@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university. We used to study together every weekend.",
+    "goal": 14,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Johnson",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "marcus.j@outlook.com",
+    "days_since_contact": 18,
+    "status": "almost due",
+    "tags": ["work", "mentor"],
+    "bio": "My first manager at my internship. Taught me so much about the industry.",
+    "goal": 21,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 3,
+    "name": "Aisha Patel",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "aisha.patel@yahoo.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["family", "childhood"],
+    "bio": "Grew up in the same neighborhood. Known each other since we were kids.",
+    "goal": 30,
+    "next_due_date": "2026-03-15"
+  },
+  {
+    "id": 4,
+    "name": "Tom Baker",
+    "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "email": "tombaker@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["hobby", "travel"],
+    "bio": "Met at a photography workshop. We go on photo walks together every month.",
+    "goal": 14,
+    "next_due_date": "2026-04-28"
+  },
+  {
+    "id": 5,
+    "name": "Olivia Martinez",
+    "picture": "https://randomuser.me/api/portraits/women/26.jpg",
+    "email": "olivia.m@gmail.com",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["college", "work"],
+    "bio": "Classmate turned colleague. She moved to a different city last year.",
+    "goal": 30,
+    "next_due_date": "2026-02-10"
+  },
+  {
+    "id": 6,
+    "name": "Ryan O'Brien",
+    "picture": "https://randomuser.me/api/portraits/men/52.jpg",
+    "email": "ryan.obrien@hotmail.com",
+    "days_since_contact": 10,
+    "status": "on-track",
+    "tags": ["close friend", "hobby"],
+    "bio": "Best friend from high school. We still play games online every week.",
+    "goal": 14,
+    "next_due_date": "2026-04-24"
+  },
+  {
+    "id": 7,
+    "name": "Lisa Nakamura",
+    "picture": "https://randomuser.me/api/portraits/women/90.jpg",
+    "email": "lisa.nakamura@gmail.com",
+    "days_since_contact": 55,
+    "status": "overdue",
+    "tags": ["work", "mentor"],
+    "bio": "Senior developer who helped me get through my first big project.",
+    "goal": 21,
+    "next_due_date": "2026-02-28"
+  },
+  {
+    "id": 8,
+    "name": "James Wright",
+    "picture": "https://randomuser.me/api/portraits/men/18.jpg",
+    "email": "james.wright@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["hobby", "travel"],
+    "bio": "Travel buddy. We backpacked through Southeast Asia together last summer.",
+    "goal": 14,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 9,
+    "name": "Priya Sharma",
+    "picture": "https://randomuser.me/api/portraits/women/55.jpg",
+    "email": "priya.sharma@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["college", "close friend"],
+    "bio": "Met during freshman orientation. She always knows how to cheer me up.",
+    "goal": 14,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 10,
+    "name": "Daniel Park",
+    "picture": "https://randomuser.me/api/portraits/men/61.jpg",
+    "email": "daniel.park@outlook.com",
+    "days_since_contact": 38,
+    "status": "overdue",
+    "tags": ["work", "hobby"],
+    "bio": "Colleague who shares my love for hiking. We plan trails together on weekends.",
+    "goal": 21,
+    "next_due_date": "2026-03-20"
+  }
+]
