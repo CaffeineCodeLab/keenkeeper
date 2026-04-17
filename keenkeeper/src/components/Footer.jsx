@@ -16,7 +16,7 @@ function Footer() {
           paddingBottom: "30px",
         }}
       >
-        {/* Top section — logo + text + social icons */}
+        {/* Top section*/}
         <div className="text-center" style={{ marginBottom: "40px" }}>
           <img src={logoXl} alt="KeenKeeper" className="h-10 mx-auto mb-4" />
           <p className="text-gray-300 text-sm">

@@ -45,158 +45,166 @@ function FriendDetails() {
     <div className="bg-[#f0f4f2] min-h-screen">
       <Toaster position="top-right" />
 
-      {/* Outer container — 1600 fill, padding left-right 245, top-bottom 80 */}
       <div
-        className="mx-auto"
         style={{
           maxWidth: "1600px",
+          margin: "0 auto",
           paddingLeft: "245px",
           paddingRight: "245px",
           paddingTop: "80px",
           paddingBottom: "80px",
         }}
       >
-        {/* Inner frame — 1110 x 488 */}
-        <div className="flex" style={{ gap: "24px" }}>
 
-          {/* LEFT COLUMN — 350px wide */}
+        <div style={{ display: "flex", gap: "24px" }}>
+
           <div style={{ width: "350px", flexShrink: 0 }}>
 
-            {/* Friend Info Card — 350 x 284 */}
             <div
-              className="bg-white rounded-xl flex flex-col items-center text-center"
-              style={{ height: "284px", padding: "24px", marginBottom: "16px" }}
+              className="bg-white rounded-xl"
+              style={{
+                width: "350px",
+                height: "284px",
+                padding: "24px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+                marginBottom: "16px",
+              }}
             >
               <img
                 src={friend.picture}
                 alt={friend.name}
-                className="w-16 h-16 rounded-full object-cover mb-3"
+                style={{ width: "64px", height: "64px", borderRadius: "50%", objectFit: "cover", marginBottom: "12px" }}
               />
-              <h2 className="text-lg font-bold text-[#1e3a2f] mb-2">
+              <h2 style={{ fontSize: "18px", fontWeight: "700", color: "#1e3a2f", marginBottom: "8px" }}>
                 {friend.name}
               </h2>
               <span
-                className={`text-xs px-3 py-1 rounded-full font-medium mb-2 ${getStatusStyle(friend.status)}`}
+                className={getStatusStyle(friend.status)}
+                style={{ fontSize: "12px", padding: "2px 12px", borderRadius: "999px", fontWeight: "500", marginBottom: "8px" }}
               >
                 {getStatusLabel(friend.status)}
               </span>
-              <div className="flex flex-wrap justify-center gap-1 mb-2">
+              <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "4px", marginBottom: "8px" }}>
                 {friend.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full uppercase"
+                    style={{ fontSize: "11px", backgroundColor: "#dcfce7", color: "#15803d", padding: "2px 8px", borderRadius: "999px", textTransform: "uppercase" }}
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <p className="text-gray-500 text-sm italic mb-1">"{friend.bio}"</p>
-              <p className="text-gray-400 text-xs">Preferred: email</p>
+              <p style={{ fontSize: "13px", color: "#6b7280", fontStyle: "italic", fontWeight: "500" ,marginBottom: "4px" }}>"{friend.bio}"</p>
+              <p style={{ fontSize: "13px", color: "#1F2937", fontWeight: "600"}}>{friend.email}</p>
             </div>
 
-
-{/* Action Buttons */}
-<div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-  <button
-    className="bg-white rounded-xl flex items-center gap-3 px-5 text-sm text-gray-700 hover:bg-gray-50"
-    style={{ width: "350px", height: "53px" }}
-  >
-    🔔 Snooze 2 Weeks
-  </button>
-  <button
-    className="bg-white rounded-xl flex items-center gap-3 px-5 text-sm text-gray-700 hover:bg-gray-50"
-    style={{ width: "350px", height: "53px" }}
-  >
-    🗂️ Archive
-  </button>
-  <button
-    className="bg-white rounded-xl flex items-center gap-3 px-5 text-sm text-red-500 hover:bg-gray-50"
-    style={{ width: "350px", height: "53px" }}
-  >
-    🗑️ Delete
-  </button>
-</div>
+            {/* Action Buttons*/}
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+              <button
+                className="bg-white rounded-xl hover:bg-gray-50 font-semibold"
+                style={{ width: "350px", height: "53px", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", color: "#374151" }}
+              >
+                ⏰ Snooze 2 Weeks
+              </button>
+              <button
+                className="bg-white rounded-xl hover:bg-gray-50 font-semibold"
+                style={{ width: "350px", height: "53px", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", color: "#374151" }}
+              >
+                📦 Archive
+              </button>
+              <button
+                className="bg-white rounded-xl hover:bg-gray-50 font-semibold"
+                style={{ width: "350px", height: "53px", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", color: "#ef4444" }}
+              >
+                🗑️ Delete
+              </button>
+            </div>
 
           </div>
 
-          {/* RIGHT COLUMN — flex-1, 736px */}
-          <div className="flex flex-col flex-1" style={{ gap: "24px" }}>
+          <div style={{ width: "736px", display: "flex", flexDirection: "column", gap: "24px" }}>
 
-            {/* Stats Cards — 736 x 134, 3 cards, gap 24 */}
-            <div
-              className="grid grid-cols-3"
-              style={{ gap: "24px", height: "134px" }}
-            >
-              <div className="bg-white rounded-xl flex flex-col items-center justify-center">
-                <p className="text-3xl font-bold text-[#1e3a2f]">
-                  {friend.days_since_contact}
-                </p>
-                <p className="text-gray-500 text-sm mt-1">Days Since Contact</p>
+            {/* Stats Cards*/}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", height: "134px" }}>
+              <div
+                className="bg-white rounded-xl"
+                style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}
+              >
+                <p style={{ fontSize: "30px", fontWeight: "700", color: "#244D3F" }}>{friend.days_since_contact}</p>
+                <p style={{ fontSize: "13px", color: "#64748B", marginTop: "4px" }}>Days Since Contact</p>
               </div>
-              <div className="bg-white rounded-xl flex flex-col items-center justify-center">
-                <p className="text-3xl font-bold text-[#1e3a2f]">{friend.goal}</p>
-                <p className="text-gray-500 text-sm mt-1">Goal (Days)</p>
+              <div
+                className="bg-white rounded-xl"
+                style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}
+              >
+                <p style={{ fontSize: "30px", fontWeight: "700", color: "#244D3F" }}>{friend.goal}</p>
+                <p style={{ fontSize: "13px", color: "#64748B", marginTop: "4px" }}>Goal (Days)</p>
               </div>
-              <div className="bg-white rounded-xl flex flex-col items-center justify-center">
-                <p className="text-2xl font-bold text-[#1e3a2f]">{formattedDate}</p>
-                <p className="text-gray-500 text-sm mt-1">Next Due</p>
+              <div
+                className="bg-white rounded-xl"
+                style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}
+              >
+                <p style={{ fontSize: "22px", fontWeight: "700", color: "#244D3F" }}>{formattedDate}</p>
+                <p style={{ fontSize: "13px", color: "#64748B", marginTop: "4px" }}>Next Due</p>
               </div>
             </div>
 
-            {/* Relationship Goal — 736 x 121 */}
+
             <div
               className="bg-white rounded-xl"
-              style={{ height: "121px", padding: "24px" }}
+              style={{ width: "736px", height: "121px", padding: "24px" }}
             >
-              <div className="flex justify-between items-center mb-3">
-                <h3 className="font-semibold text-[#1e3a2f]">Relationship Goal</h3>
-                <button className="btn btn-sm btn-outline border-gray-300 text-gray-600">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
+                <h3 style={{ fontWeight: "600", color: "#244D3F", fontSize: "15px" }}>Relationship Goal</h3>
+                <button
+                  className="rounded-lg border border-gray-300 hover:bg-gray-50"
+                  style={{ padding: "4px 12px", fontSize: "13px", color: "#374151" }}
+                >
                   Edit
                 </button>
               </div>
-              <p className="text-gray-600 text-sm">
-                Connect every{" "}
-                <span className="font-bold">{friend.goal} days</span>
+              <p style={{ fontSize: "14px", color: "#1F2937" }}>
+                Connect every <span style={{ fontWeight: "700" }}>{friend.goal} days</span>
               </p>
             </div>
 
-            {/* Quick Check-In — 736 x 185, padding 24 all sides */}
             <div
               className="bg-white rounded-xl"
-              style={{ height: "185px", padding: "24px" }}
+              style={{ width: "736px", height: "185px", padding: "24px" }}
             >
-              <h3
-                className="font-semibold text-[#1e3a2f]"
-                style={{ marginBottom: "16px" }}
-              >
+              <h3 style={{ fontWeight: "600", color: "#1e3a2f", fontSize: "15px", marginBottom: "16px" }}>
                 Quick Check-In
               </h3>
 
-              {/* 3 buttons — total 688 x 95, each 218.67 x 95, gap 24 */}
-              <div
-                className="grid grid-cols-3"
-                style={{ gap: "24px", height: "95px" }}
-              >
+              {/* 3 buttons */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", height: "95px" }}>
                 <button
-                  className="flex flex-col items-center justify-center border border-gray-200 rounded-xl hover:bg-gray-50"
+                  className="bg-white rounded-xl border border-gray-200 hover:bg-gray-50"
+                  style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "6px" }}
                   onClick={() => handleCheckIn("Call")}
                 >
-                  <img src={callIcon} alt="Call" className="w-7 h-7 mb-1" />
-                  <span className="text-sm text-gray-700">Call</span>
+                  <img src={callIcon} alt="Call" style={{ width: "28px", height: "28px" }} />
+                  <span style={{ fontSize: "13px", color: "#374151" }}>Call</span>
                 </button>
                 <button
-                  className="flex flex-col items-center justify-center border border-gray-200 rounded-xl hover:bg-gray-50"
+                  className="bg-white rounded-xl border border-gray-200 hover:bg-gray-50"
+                  style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "6px" }}
                   onClick={() => handleCheckIn("Text")}
                 >
-                  <img src={textIcon} alt="Text" className="w-7 h-7 mb-1" />
-                  <span className="text-sm text-gray-700">Text</span>
+                  <img src={textIcon} alt="Text" style={{ width: "28px", height: "28px" }} />
+                  <span style={{ fontSize: "13px", color: "#374151" }}>Text</span>
                 </button>
                 <button
-                  className="flex flex-col items-center justify-center border border-gray-200 rounded-xl hover:bg-gray-50"
+                  className="bg-white rounded-xl border border-gray-200 hover:bg-gray-50"
+                  style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "6px" }}
                   onClick={() => handleCheckIn("Video")}
                 >
-                  <img src={videoIcon} alt="Video" className="w-7 h-7 mb-1" />
-                  <span className="text-sm text-gray-700">Video</span>
+                  <img src={videoIcon} alt="Video" style={{ width: "28px", height: "28px" }} />
+                  <span style={{ fontSize: "13px", color: "#374151" }}>Video</span>
                 </button>
               </div>
             </div>
